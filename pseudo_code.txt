@@ -3,3 +3,60 @@ The following text is the pseudocode that will be realised during this project.
 The following pseudocode constructs were used:
 https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/national/pseudocode%2520constructs.png
 
+
+SET rounds = 5
+SET humanScore = 0
+SET computerScore = 0
+
+WHILE round < 1 
+    
+    REPEAT
+
+        OUTPUT 'Enter your choice: (rock / paper / scissors)'
+        READ humanChoice
+        COMPUTE computerChoice
+
+        IF humanChoice == computerChoice THEN  
+            OUTPUT 'Draw!'
+        ENDIF
+
+    UNTIL (humanChoice != computerChoice) && (humanChoice != null & computerChoice != null)
+
+    IF humanChoice == 'rock' THEN
+
+        IF computerChoice == 'scissors' THEN
+            OUTPUT 'You win!'
+            INCREMENT humanScore
+        ELSE 
+            OUTPUT 'You lose!'
+            INCREMENT computerScore
+        ENDIF
+
+    ELSEIF humanChoice == 'paper' THEN
+
+        IF computerChoice == 'rock' THEN
+            OUTPUT 'You win!'
+            INCREMENT humanScore
+        ELSE 
+            OUTPUT 'You lose!'
+            INCREMENT computerScore
+        ENDIF
+
+    ELSE 
+
+        IF computerChoice == 'paper' THEN
+            OUTPUT 'You win!'
+            INCREMENT humanScore
+        ELSE 
+            OUTPUT 'You lose!'
+            INCREMENT computerScore
+        ENDIF
+
+    ENDIF
+
+    DECREMENT rounds
+ENDWHILE
+
+OUTPUT 'Final score: '
+OUTPUT 'Player    - ' + playerScore
+OUTPUT 'Computer  - ' + computerScore
