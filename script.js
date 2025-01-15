@@ -47,7 +47,7 @@ function playRound(humanChoice, computerChoice) {
         }
         else {
             console.log('You lose! Paper beats rock.');
-            computerScoreScore++;
+            computerScore++;
         }
     }
     else if (humanChoice == 'paper') {
