@@ -1,5 +1,5 @@
 // Variables for tracking the scores for the player/computer.
-let rounds = 5;
+let rounds = 1;
 let humanScore = 0;
 let computerScore = 0;
 
@@ -42,45 +42,61 @@ function playRound(humanChoice, computerChoice) {
     }
     else if (humanChoice == 'rock') {
         if (computerChoice == 'scissors') {
-            console.log('You win! Rock beats scissors.');
+            console.log('You win the round! Rock beats scissors.');
             humanScore++;
         }
         else {
-            console.log('You lose! Paper beats rock.');
+            console.log('You lose the round! Paper beats rock.');
             computerScore++;
         }
     }
     else if (humanChoice == 'paper') {
         if (computerChoice == 'rock') {
-            console.log('You win! Paper beats rock.');
+            console.log('You win the round! Paper beats rock.');
             humanScore++;
         }
         else {
-            console.log('You lose! Scissors beats paper.');
+            console.log('You lose the round! Scissors beats paper.');
             computerScore++;
         }
     }
     else {
         if (computerChoice == 'paper') {
-            console.log('You win! Scissors beats paper.');
+            console.log('You win the round! Scissors beats paper.');
             humanScore++;
         }
         else {
-            console.log('You lose! Rock beats scissors.');
+            console.log('You lose the round! Rock beats scissors.');
             computerScore++;
         }
     }
     console.log('Current score: ');
     console.log('Player   - ' + humanScore);
     console.log('Computer - ' + computerScore);
-    rounds--;
 }
 
 // Controls how the entire game is played.
 // Hardcoded to have a player play 5 rounds against the computer.
 function playGame() {
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
+    while (rounds <= 5) {
+        console.log('Round' + rounds);
+        humanSelection = getHumanChoice();
+        computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+        rounds--;
+    }
+    console.log('Final score:');
+    console.log('Player   - ' + humanScore);
+    console.log('Computer - ' + computerScore);
+
+    if (humanScore > computerScore) {
+        console.log('You win the game!');
+    }
+    else if (computerScore < humanScore) {
+        console.log('You lose the game!');
+    }
+    rounds = 1;
+    humanScore = 0;
+    computerScore = 0;
 }
 
