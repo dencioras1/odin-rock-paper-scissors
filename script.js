@@ -79,7 +79,7 @@ function playRound(humanChoice, computerChoice) {
 // Hardcoded to have a player play 5 rounds against the computer.
 function playGame() {
     while (rounds <= 5) {
-        console.log('Round' + rounds);
+        console.log('Round ' + rounds);
         humanSelection = getHumanChoice();
         computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
