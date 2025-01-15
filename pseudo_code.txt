@@ -1,0 +1,5 @@
+The following text is the pseudocode that will be realised during this project.
+
+The following pseudocode constructs were used:
+https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/national/pseudocode%2520constructs.png
+
