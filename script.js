@@ -57,7 +57,7 @@ function playRound(humanChoice, computerChoice) {
         }
         else {
             console.log('You lose! Scissors beats paper.');
-            computerScoreScore++;
+            computerScore++;
         }
     }
     else {
@@ -67,7 +67,7 @@ function playRound(humanChoice, computerChoice) {
         }
         else {
             console.log('You lose! Rock beats scissors.');
-            computerScoreScore++;
+            computerScore++;
         }
     }
     rounds--;
