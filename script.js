@@ -70,6 +70,9 @@ function playRound(humanChoice, computerChoice) {
             computerScore++;
         }
     }
+    console.log('Current score: ');
+    console.log('Player   - ' + humanScore);
+    console.log('Computer - ' + computerScore);
     rounds--;
 }
 
