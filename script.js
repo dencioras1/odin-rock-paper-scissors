@@ -35,10 +35,6 @@ function playRound(humanChoice, computerChoice) {
 // Controls how the entire game is played.
 // Hardcoded to have a player play 5 rounds against the computer.
 function playGame() {
-    while (rounds > 1) {
-
-
-        rounds--;
-    }
+    console.log("Link successful!");
 }
 
