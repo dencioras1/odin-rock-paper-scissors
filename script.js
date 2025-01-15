@@ -3,6 +3,9 @@ let rounds = 5;
 let humanScore = 0;
 let computerScore = 0;
 
+let humanSelection = null;
+let computerSelection = null;
+
 // Randomly returns a choice between rock, paper and scissors.
 function getComputerChoice() {
     let random = Math.random();
@@ -32,12 +35,45 @@ function getHumanChoice() {
 
 // Controls the way each round is played.
 function playRound(humanChoice, computerChoice) {
-
+    if (humanChoice == computerChoice) {
+        console.log('Draw! No one gets points!');
+    }
+    else if (humanChoice == 'rock') {
+        if (computerChoice == 'scissors') {
+            console.log('You win! Rock beats scissors.');
+            humanScore++;
+        }
+        else {
+            console.log('You lose! Paper beats rock.');
+            computerScoreScore++;
+        }
+    }
+    else if (humanChoice == 'paper') {
+        if (computerChoice == 'rock') {
+            console.log('You win! Paper beats rock.');
+            humanScore++;
+        }
+        else {
+            console.log('You lose! Scissors beats paper.');
+            computerScoreScore++;
+        }
+    }
+    else {
+        if (computerChoice == 'paper') {
+            console.log('You win! Scissors beats paper.');
+            humanScore++;
+        }
+        else {
+            console.log('You lose! Rock beats scissors.');
+            computerScoreScore++;
+        }
+    }
+    rounds--;
 }
 
 // Controls how the entire game is played.
 // Hardcoded to have a player play 5 rounds against the computer.
 function playGame() {
-    getHumanChoice();
+    playRound();
 }
 
