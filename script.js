@@ -21,8 +21,14 @@ function getComputerChoice() {
 // Displays a prompt window, during which the player must input their choice between rock, paper and scissors.
 // Works based on case-insensitive string input.
 function getHumanChoice() {
-    let humanChoice = prompt("Enter your choice: (rock / paper / scissors)");
-    return humanChoice.toLowerCase();
+    let humanChoice = null;
+    humanChoice = prompt("Enter your choice: (rock / paper / scissors)");
+    
+    while (humanChoice != 'rock' || humanChoice != 'paper' || humanChoice != 'scissors') {
+        humanChoice = prompt("Invalid input. Try again: (rock / paper / scissors)");
+    }
+    
+    return humanChoice;
 }
 
 // Controls the way each round is played.
@@ -33,8 +39,6 @@ function playRound(humanChoice, computerChoice) {
 // Controls how the entire game is played.
 // Hardcoded to have a player play 5 rounds against the computer.
 function playGame() {
-    for(let i = 0; i < 20; i++) {
-        console.log(getComputerChoice());
-    }
+    getHumanChoice();
 }
 
