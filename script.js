@@ -7,7 +7,17 @@ let computerScore = 0;
 
 // Randomly returns a choice between rock, paper and scissors.
 function getComputerChoice() {
+    let random = Math.random();
 
+    if (random >= 0 && random < 1/3) {
+        return 'rock';
+    }
+    else if (random >= 1/3 && random < 2/3) {
+        return 'paper';
+    }
+    else {
+        return 'scissors';
+    }
 }
 
 // Displays a prompt window, during which the player must input their choice between rock, paper and scissors.
