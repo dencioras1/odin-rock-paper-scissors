@@ -26,7 +26,7 @@ function getHumanChoice() {
         if (humanChoice != 'rock' && humanChoice != 'paper' && humanChoice != 'scissors') {
             console.log("Invalid player input! Please try again.");
         }
-        else return humanChoice;
+        else return humanChoice.toLowerCase();
     }
 }
 
