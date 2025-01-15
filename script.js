@@ -80,10 +80,10 @@ function playRound(humanChoice, computerChoice) {
 function playGame() {
     while (rounds <= 5) {
         console.log('Round ' + rounds);
-        humanSelection = getHumanChoice();
         computerSelection = getComputerChoice();
+        humanSelection = getHumanChoice();
         playRound(humanSelection, computerSelection);
-        rounds--;
+        rounds++;
     }
     console.log('Final score:');
     console.log('Player   - ' + humanScore);
@@ -94,9 +94,10 @@ function playGame() {
     }
     else if (computerScore < humanScore) {
         console.log('You lose the game!');
+    } 
+    else {
+        console.log('Its a draw!');
     }
-    rounds = 1;
-    humanScore = 0;
-    computerScore = 0;
+    
 }
 
