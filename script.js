@@ -35,7 +35,9 @@ function getHumanChoice() {
 
 // Controls the way each round is played.
 function playRound(humanChoice, computerChoice) {
+    console.log('You chose ' + humanChoice + ' and computer chose ' + computerChoice + '.');
     if (humanChoice == computerChoice) {
+        
         console.log('Draw! No one gets points!');
     }
     else if (humanChoice == 'rock') {
