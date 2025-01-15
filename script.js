@@ -1,5 +1,3 @@
-console.log('Hello, world!')
-
 // Variables for tracking the scores for the player/computer.
 let rounds = 5;
 let humanScore = 0;
